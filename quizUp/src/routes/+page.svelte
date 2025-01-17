@@ -1,8 +1,9 @@
 <script>
+    import { goto } from '$app/navigation';
+   
 
     // import firebase from 'firebase/app';
     // import 'firebase/database';
-
     // const firebaseConfig = {
     //   apiKey: "AIzaSyAwXhLd1wvRLobJ05MIdRdjAW9613XUCFI",
     //   authDomain: "YOUR_AUTH_DOMAIN",
@@ -16,8 +17,6 @@
     // firebase.initializeApp(firebaseConfig);
 
 
-
-    
     let change = false;
 
     function showLogin() {
@@ -29,7 +28,8 @@
     }
 
     function start() {
-        
+        //
+        goto('/home');
     }
     
     
@@ -52,10 +52,8 @@
                     <button id="start_btn" on:click={start}>Start</button>
                 </div>
                 
-            </div>
-        {/if}
-
-        {#if change}
+            </div> 
+        {:else}
             <div id="login">
 
                 <input type="text" placeholder="Nickname">
