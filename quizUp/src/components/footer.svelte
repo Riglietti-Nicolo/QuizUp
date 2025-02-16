@@ -60,4 +60,5 @@
         left: 12%;
         width: 75%;
     }
+    
 </style>
